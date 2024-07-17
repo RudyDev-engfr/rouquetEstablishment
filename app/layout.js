@@ -2,7 +2,7 @@
 import GoogleAnalytics from "../lib/GoogleAnalytics";
 import "./globals.css";
 
-const GA_TRACKING_ID = "YOUR_GA_TRACKING_ID";
+const GA_TRACKING_ID = "G-HYG8WM4QC6";
 
 export default function RootLayout({ children }) {
   return (
