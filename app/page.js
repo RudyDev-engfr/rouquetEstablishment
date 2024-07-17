@@ -1,95 +1,37 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import Head from "next/head";
+import { NextSeo } from "next-seo";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
+    <>
+      <Head>
+        <title>Revêtement alimentaire à Cognac - Nom de l'entreprise</title>
+        <meta
+          name='description'
+          content="Découvrez les services de revêtement alimentaire de Nom de l'entreprise à Cognac. Expertise, qualité et durabilité."
         />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+      </Head>
+      <NextSeo
+        title="Revêtement alimentaire à Cognac - Nom de l'entreprise"
+        description="Découvrez les services de revêtement alimentaire de Nom de l'entreprise à Cognac. Expertise, qualité et durabilité."
+        canonical='https://www.votre-site.com/'
+        openGraph={{
+          url: "https://www.votre-site.com/",
+          title: "Revêtement alimentaire à Cognac - Nom de l&apos;entreprise",
+          description:
+            "Découvrez les services de revêtement alimentaire de Nom de l&apos;entreprise à Cognac. Expertise, qualité et durabilité.",
+          images: [
+            {
+              url: "https://www.votre-site.com/images/og-image.jpg",
+              width: 800,
+              height: 600,
+              alt: "Revêtement alimentaire à Cognac",
+            },
+          ],
+          site_name: "Etablissement Rouquet",
+        }}
+      />
+      {/* Contenu de la page */}
+    </>
   );
 }

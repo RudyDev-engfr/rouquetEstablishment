@@ -1,22 +1,17 @@
 {
-  "name": "rouquetestablishment",
-  "version": "0.1.0",
-  "private": true,
+  "name": "etablissement-rouquet",
+  "version": "1.0.0",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "postbuild": "next-sitemap"
   },
   "dependencies": {
-    "next": "13.4.12",
-    "next-seo": "^6.5.0",
-    "next-sitemap": "^4.2.3",
-    "react": "^18",
-    "react-dom": "^18"
-  },
-  "devDependencies": {
-    "eslint": "^8",
-    "eslint-config-next": "14.2.5"
+    "next": "^13.4.12",
+    "next-sitemap": "^3.0.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "next-seo": "^6.0.0"
   }
 }
