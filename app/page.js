@@ -1,28 +1,24 @@
-import Head from "next/head";
-import { NextSeo } from "next-seo";
+import dynamic from "next/dynamic";
 
-export default function Home() {
+// Charger les composants client de manière dynamique
+const Head = dynamic(() => import("../components/Head"), { ssr: false });
+const GoogleAnalytics = dynamic(() => import("../components/GoogleAnalytics"), { ssr: false });
+
+export default function HomePage() {
   return (
     <>
-      <Head>
-        <title>Revêtement alimentaire à Cognac - Nom de l'entreprise</title>
-        <meta
-          name='description'
-          content="Découvrez les services de revêtement alimentaire de Nom de l'entreprise à Cognac. Expertise, qualité et durabilité."
-        />
-      </Head>
-      <NextSeo
-        title="Revêtement alimentaire à Cognac - Nom de l'entreprise"
-        description="Découvrez les services de revêtement alimentaire de Nom de l'entreprise à Cognac. Expertise, qualité et durabilité."
-        canonical='https://www.votre-site.com/'
+      <Head
+        title='Etablissement Rouquet'
+        description="Découvrez les services de revêtement alimentaire d'Etablissement Rouquet à Cognac. Expertise, qualité et durabilité."
+        canonical='https://www.rouquet.com/'
         openGraph={{
-          url: "https://www.votre-site.com/",
-          title: "Revêtement alimentaire à Cognac - Nom de l&apos;entreprise",
+          url: "https://www.rouquet.com/",
+          title: "Revêtement alimentaire à Cognac - Etablissement Rouquet",
           description:
-            "Découvrez les services de revêtement alimentaire de Nom de l&apos;entreprise à Cognac. Expertise, qualité et durabilité.",
+            "Découvrez les services de revêtement alimentaire d&apos;Etablissement Rouquet à Cognac. Expertise, qualité et durabilité.",
           images: [
             {
-              url: "https://www.votre-site.com/images/og-image.jpg",
+              url: "https://www.rouquet.com/images/og-image.jpg",
               width: 800,
               height: 600,
               alt: "Revêtement alimentaire à Cognac",
@@ -31,7 +27,8 @@ export default function Home() {
           site_name: "Etablissement Rouquet",
         }}
       />
-      {/* Contenu de la page */}
+      <GoogleAnalytics />
+      <div>{/* Contenu de la page d'accueil */}</div>
     </>
   );
 }
