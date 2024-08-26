@@ -1,0 +1,44 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 10px 20px;
+}
+
+.logo a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.navLinks {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+.navLinks li {
+  display: inline;
+}
+
+.navLinks a {
+  color: white;
+  text-decoration: none;
+  font-size: 1em;
+}
+
+.navLinks a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .navLinks {
+    display: none;
+  }
+
+  .navbar {
+    justify-content: center;
+  }
+}
