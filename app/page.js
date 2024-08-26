@@ -1,6 +1,6 @@
 import dynamic from "next/dynamic";
 
-// Charger les composants client de manière dynamique
+// Charger les composants client de manière dynamique sans SSR
 const Head = dynamic(() => import("../components/Head"), { ssr: false });
 const GoogleAnalytics = dynamic(() => import("../components/GoogleAnalytics"), { ssr: false });
 
