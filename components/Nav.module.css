@@ -2,21 +2,43 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #333;
-  padding: 10px 20px;
+  background-color: var(--secondary-color);
+  padding: 10px 0px 10px 0px;
+  position: fixed;
+  width: 100vw; /* Prend toute la largeur de l'écran */
+  top: 0;
+  left: 0;
+  z-index: 1000;
 }
 
 .logo a {
-  color: white;
+  color: var(--header-text-color);
   text-decoration: none;
   font-size: 1.5em;
   font-weight: bold;
+  padding-left: 20px;
 }
 
+.burger {
+  display: none; /* Par défaut caché sur les écrans larges */
+  font-size: 1.5rem; /* Taille appropriée pour l'icône */
+  color: var(--header-text-color);
+  background: none; /* Pas de fond */
+  border: none; /* Pas de bordure */
+  cursor: pointer; /* Curseur pointeur */
+  z-index: 1100;
+  padding: 10px; /* Padding ajusté pour un espacement agréable */
+  padding-right: 40px;
+  width: 40px; /* Définir une taille spécifique pour le bouton */
+  /* height: 40px; Définir une hauteur spécifique pour le bouton */
+}
+
+/* Liste des liens de navigation */
 .navLinks {
   list-style: none;
   display: flex;
-  gap: 15px;
+  gap: 20px;
+  padding-right: 20px;
 }
 
 .navLinks li {
@@ -24,21 +46,60 @@
 }
 
 .navLinks a {
-  color: white;
-  text-decoration: none;
+  color: var(--header-text-color);
   font-size: 1em;
+  text-decoration: none;
 }
 
 .navLinks a:hover {
   text-decoration: underline;
 }
 
+/* Styles spécifiques pour mobile */
 @media (max-width: 768px) {
-  .navLinks {
-    display: none;
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--secondary-color);
+    padding: 10px 10px 10px 8px;
+    position: fixed;
+    width: 100vw; /* Prend toute la largeur de l'écran */
+    top: 0;
+    left: 0;
+    z-index: 1000;
   }
 
-  .navbar {
-    justify-content: center;
+  .burger {
+    display: block; /* Afficher le bouton burger sur mobile */
+    order: 2; /* Placer le bouton en second, à droite */
+  }
+
+  .logo {
+    order: 1; /* Assurer que le logo reste à gauche sur mobile */
+    padding-left: none;
+  }
+
+  .navLinks {
+    display: none; /* Cacher par défaut */
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: var(--secondary-color);
+    position: fixed;
+    top: 60px; /* Espacement sous la navbar */
+    right: 0;
+    width: 80vw; /* Ajuster la largeur du menu mobile */
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+  }
+
+  .navActive {
+    display: flex !important; /* Forcer l'affichage du menu sur mobile */
+    flex-direction: column;
+  }
+
+  .navLinks li {
+    margin-bottom: 15px; /* Espacement entre chaque lien */
   }
 }

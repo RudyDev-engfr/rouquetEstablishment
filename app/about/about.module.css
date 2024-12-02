@@ -1,0 +1,34 @@
+.container {
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+}
+
+.header {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: var(--secondary-color);
+}
+
+.sectionTitle {
+  font-size: 2em;
+  margin-bottom: 15px;
+  color: var(--primary-color);
+}
+
+.text {
+  font-size: 1.1em;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.list {
+  padding-left: 20px;
+}
+
+.listItem {
+  font-size: 1em;
+  margin-bottom: 10px;
+}

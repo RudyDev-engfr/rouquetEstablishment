@@ -1,0 +1,82 @@
+/* Conteneur principal de la page Portfolio */
+.container {
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+}
+
+/* Titre principal de la page Portfolio */
+.pageTitle {
+  font-size: 2.5rem;
+  text-align: center;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+/* Description de la page Portfolio */
+.pageDescription {
+  font-size: 1.2rem;
+  text-align: center;
+  color: #555555;
+  margin-bottom: 40px;
+}
+
+/* Conteneur pour l'ensemble des galeries */
+.portfolioContainer {
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+/* Chaque galerie individuelle */
+.gallery {
+  margin-bottom: 40px;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Titre de chaque galerie */
+.galleryTitle {
+  font-size: 2rem;
+  color: var(--primary-color);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Grille des images dans chaque galerie */
+.imageGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+/* Style de chaque image */
+.image {
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Ajustements pour les petits écrans (mobile) */
+@media (max-width: 768px) {
+  .pageTitle {
+    font-size: 2rem; /* Réduction du titre principal sur mobile */
+  }
+
+  .pageDescription {
+    font-size: 1rem; /* Réduction de la description sur mobile */
+  }
+
+  .galleryTitle {
+    font-size: 1.8rem; /* Réduction de la taille des titres de galerie */
+  }
+
+  .imageGrid {
+    gap: 15px; /* Réduction de l'espace entre les images pour les petits écrans */
+  }
+}
