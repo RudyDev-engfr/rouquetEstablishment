@@ -1,75 +1,43 @@
+/* globals.css */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 :root {
-  --primary-color: #6baed6; /* Bleu pastel principal */
-  --secondary-color: #3182bd; /* Bleu un peu plus foncé pour les boutons et les accents */
-  --background-color: #f0f4f8; /* Bleu très clair pour le fond */
-  --text-color: #333; /* Couleur du texte */
-  --header-text-color: #fff; /* Couleur du texte des en-têtes */
-  --cta-hover-color: #25597a;
+  --primary-color: #0070f3;
+  --secondary-color: #f9f9f9;
+  --cta-color: #ff4081;
+  --cta-hover-color: #e73370;
+  --text-color: #333333;
 }
 
 body {
-  font-family: Arial, sans-serif;
-  background-color: var(--background-color);
   margin: 0;
   padding: 0;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    Segoe UI,
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    Fira Sans,
+    Droid Sans,
+    Helvetica Neue,
+    sans-serif;
+  background-color: var(--secondary-color);
   color: var(--text-color);
-  padding-top: 80px; /* Compense la hauteur de la barre de navigation */
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Georgia", serif;
-  color: var(--secondary-color);
 }
 
 a {
-  color: var(--secondary-color);
+  color: inherit;
   text-decoration: none;
 }
 
-a:hover {
-  text-decoration: underline;
-}
-
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-button {
-  padding: 10px 15px;
-  background-color: var(--secondary-color);
-  color: var(--header-text-color);
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #25597a; /* Couleur plus foncée au survol */
-}
-
-@media (max-width: 768px) {
-  .container {
-    width: 95%;
-  }
-
-  h1 {
-    font-size: 1.8em;
-  }
-
-  p,
-  a {
-    font-size: 1em;
-  }
-
-  button {
-    width: 100%;
-  }
+* {
+  box-sizing: border-box;
 }

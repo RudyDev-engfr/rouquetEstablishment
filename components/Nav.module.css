@@ -1,3 +1,5 @@
+/* Nav.module.css */
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -6,10 +8,11 @@
   background-color: var(--primary-color);
   color: #ffffff;
   position: fixed;
-  width: 100vw;
+  width: 100%; /* Remplace 100vw par 100% */
   top: 0;
   left: 0;
   z-index: 1000;
+  box-sizing: border-box; /* Assure que padding et border sont inclus dans la largeur */
 }
 
 .logo a {
@@ -32,6 +35,8 @@
   list-style: none;
   display: flex;
   gap: 20px;
+  margin: 0;
+  padding: 0;
 }
 
 .navLinks li a {
@@ -58,6 +63,7 @@
     right: 0;
     padding: 20px;
     border-radius: 0 0 10px 10px;
+    width: 200px; /* Ajout d'une largeur fixe pour éviter le débordement */
   }
 
   .navActive {
