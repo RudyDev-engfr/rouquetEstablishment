@@ -1,5 +1,6 @@
 /* globals.css */
 
+/* Assurez-vous que box-sizing est bien défini globalement */
 *,
 *::before,
 *::after {
@@ -12,6 +13,7 @@
   --cta-color: #ff4081;
   --cta-hover-color: #e73370;
   --text-color: #333333;
+  --navbar-height: 60px; /* Définissez une variable pour la hauteur de la navbar */
 }
 
 body {
@@ -38,6 +40,6 @@ a {
   text-decoration: none;
 }
 
-* {
-  box-sizing: border-box;
+.main-content {
+  padding-top: var(--navbar-height); /* Ajoutez le padding-top */
 }
