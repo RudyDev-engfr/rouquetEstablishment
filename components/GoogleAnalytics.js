@@ -1,40 +1,40 @@
-"use client";
+// "use client";
 
-import { useEffect } from "react";
-import { useRouter } from "next/navigation"; // Import correct pour Next.js 13+
-import * as gtag from "../lib/gtag";
+// import { useEffect } from "react";
+// import { useRouter } from "next/navigation"; // Import correct pour Next.js 13+
+// import * as gtag from "../lib/gtag";
 
-const GoogleAnalytics = () => {
-  const router = useRouter();
+// const GoogleAnalytics = () => {
+//   const router = useRouter();
 
-  useEffect(() => {
-    const handleRouteChange = url => {
-      gtag.pageview(url);
-    };
+//   useEffect(() => {
+//     const handleRouteChange = url => {
+//       gtag.pageview(url);
+//     };
 
-    router.events.on("routeChangeComplete", handleRouteChange);
-    return () => {
-      router.events.off("routeChangeComplete", handleRouteChange);
-    };
-  }, [router]);
+//     router.events.on("routeChangeComplete", handleRouteChange);
+//     return () => {
+//       router.events.off("routeChangeComplete", handleRouteChange);
+//     };
+//   }, [router]);
 
-  return (
-    <>
-      <script async src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_TRACKING_ID}`} />
-      <script
-        dangerouslySetInnerHTML={{
-          __html: `
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', '${gtag.GA_TRACKING_ID}', {
-            page_path: window.location.pathname,
-          });
-          `,
-        }}
-      />
-    </>
-  );
-};
+//   return (
+//     <>
+//       <script async src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_TRACKING_ID}`} />
+//       <script
+//         dangerouslySetInnerHTML={{
+//           __html: `
+//           window.dataLayer = window.dataLayer || [];
+//           function gtag(){dataLayer.push(arguments);}
+//           gtag('js', new Date());
+//           gtag('config', '${gtag.GA_TRACKING_ID}', {
+//             page_path: window.location.pathname,
+//           });
+//           `,
+//         }}
+//       />
+//     </>
+//   );
+// };
 
-export default GoogleAnalytics;
+// export default GoogleAnalytics;

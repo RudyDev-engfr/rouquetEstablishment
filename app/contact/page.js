@@ -21,7 +21,7 @@ export default function ContactPage() {
         </a>{" "}
         |{" "}
         <a href='tel:0778699205' className={styles.link}>
-          07 78 69 92 05
+          07 78 68 92 05
         </a>
       </p>
       <p className={styles.paragraph}>SIRET : 333 636 959 00020</p>

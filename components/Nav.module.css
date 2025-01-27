@@ -2,104 +2,69 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--secondary-color);
-  padding: 10px 0px 10px 0px;
+  padding: 15px 20px;
+  background-color: var(--primary-color);
+  color: #ffffff;
   position: fixed;
-  width: 100vw; /* Prend toute la largeur de l'écran */
+  width: 100vw;
   top: 0;
   left: 0;
   z-index: 1000;
 }
 
 .logo a {
-  color: var(--header-text-color);
   text-decoration: none;
-  font-size: 1.5em;
+  color: #ffffff;
+  font-size: 1.5rem;
   font-weight: bold;
-  padding-left: 20px;
 }
 
 .burger {
-  display: none; /* Par défaut caché sur les écrans larges */
-  font-size: 1.5rem; /* Taille appropriée pour l'icône */
-  color: var(--header-text-color);
-  background: none; /* Pas de fond */
-  border: none; /* Pas de bordure */
-  cursor: pointer; /* Curseur pointeur */
-  z-index: 1100;
-  padding: 10px; /* Padding ajusté pour un espacement agréable */
-  padding-right: 40px;
-  width: 40px; /* Définir une taille spécifique pour le bouton */
-  /* height: 40px; Définir une hauteur spécifique pour le bouton */
+  display: none;
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 1.8rem;
+  cursor: pointer;
 }
 
-/* Liste des liens de navigation */
 .navLinks {
   list-style: none;
   display: flex;
   gap: 20px;
-  padding-right: 20px;
 }
 
-.navLinks li {
-  display: inline;
-}
-
-.navLinks a {
-  color: var(--header-text-color);
-  font-size: 1em;
+.navLinks li a {
   text-decoration: none;
+  color: #ffffff;
+  font-size: 1.2rem;
 }
 
-.navLinks a:hover {
-  text-decoration: underline;
+.navActive {
+  display: block;
 }
 
-/* Styles spécifiques pour mobile */
 @media (max-width: 768px) {
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--secondary-color);
-    padding: 10px 10px 10px 8px;
-    position: fixed;
-    width: 100vw; /* Prend toute la largeur de l'écran */
-    top: 0;
-    left: 0;
-    z-index: 1000;
-  }
-
   .burger {
-    display: block; /* Afficher le bouton burger sur mobile */
-    order: 2; /* Placer le bouton en second, à droite */
-  }
-
-  .logo {
-    order: 1; /* Assurer que le logo reste à gauche sur mobile */
-    padding-left: none;
+    display: block;
   }
 
   .navLinks {
-    display: none; /* Cacher par défaut */
+    display: none;
     flex-direction: column;
-    align-items: flex-start;
-    background-color: var(--secondary-color);
-    position: fixed;
-    top: 60px; /* Espacement sous la navbar */
+    background-color: var(--primary-color);
+    position: absolute;
+    top: 60px;
     right: 0;
-    width: 80vw; /* Ajuster la largeur du menu mobile */
     padding: 20px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
+    border-radius: 0 0 10px 10px;
   }
 
   .navActive {
-    display: flex !important; /* Forcer l'affichage du menu sur mobile */
-    flex-direction: column;
+    display: flex;
   }
 
   .navLinks li {
-    margin-bottom: 15px; /* Espacement entre chaque lien */
+    margin-bottom: 15px;
   }
 }
